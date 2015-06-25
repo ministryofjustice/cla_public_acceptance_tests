@@ -15,11 +15,6 @@ def step_impl(context):
     journey.goto_problem_page(context)
 
 
-@then(u'I am redirected to the what do you need help with page')
-def step_impl(context):
-    what_do_you_need_help_with_page.verify_on_page(context)
-
-
 @when(u'I select {scope}')
 def step_impl(context, scope):
     problem_page.select_scope(context, scope)
@@ -28,6 +23,10 @@ def step_impl(context, scope):
 @when(u'I click option {option}')
 def step_impl(context, option):
     what_do_you_need_help_with_page.select_option(context, option)
+
+@then(u'I verify I am on the what do you need help with page')
+def step_impl(context):
+    what_do_you_need_help_with_page.verify_on_page(context)
 
 
 @then(u'I verify I am on the legal aid is not usually available for personal injury page')

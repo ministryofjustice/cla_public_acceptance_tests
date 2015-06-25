@@ -19,7 +19,8 @@ def get_index_by_option(option):
         'YES you are in risk of losing your home': 1,
         'NO you are not in risk of losing your home': 2,
         'You are becoming homeless': 1,
-        'Eviction': 1,
+        'You are losing my accommodation because UKVI is refusing support': 2,
+        'Eviction': 3,
         'Unlawful eviction': 1,
         'Eviction with notice': 2,
     }.get(option)
