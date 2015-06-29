@@ -2,6 +2,8 @@ from Features.pages import problem_page, maybe_able_to_get_advice_from_a_legal_a
 from Features.pages import maybe_able_to_get_advice_from_a_legal_advisor_page
 from Features.pages import legal_aid_not_normally_available_for_personal_injury_page
 from Features.pages import legal_aid_is_not_usually_available_for_this_problem
+from Features.pages import a_legal_adviser_may_be_able_to_help_you_page
+from Features.pages import contact_civil_legal_advice_page
 from Features.pages import what_do_you_need_help_with_page
 from Features.pages import about_you_page
 
@@ -47,3 +49,11 @@ def step_impl(context):
 @then(u'I verify I am on the about me page')
 def step_impl(context):
     about_you_page.verify_on_page(context)
+
+@then(u'I verify I am on the contact civil legal advice page')
+def step_impl(context):
+    contact_civil_legal_advice_page.verify_on_page(context)
+
+@then(u'I verify I am on the A legal adviser may be able to help you page')
+def step_impl(context):
+    a_legal_adviser_may_be_able_to_help_you_page.verify_on_page(context)
